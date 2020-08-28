@@ -19,12 +19,14 @@ h1 {
 }
 
 .container {
+    padding: 5rem;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    max-width: 80rem;
 }
 
 .container > * {
