@@ -143,6 +143,12 @@ function showHighscores(){
     generateScores();
 }
 
+function clearAll() {
+    window.localStorage.clear();
+    displayName.textContent = "";
+    displayScore.textContent = "";
+}
+
 function retakeQuiz() {
     scoreContainer.style.display = "none";
     gameOver.style.display = "none";
@@ -152,11 +158,7 @@ function retakeQuiz() {
     currentQuestionIndex = 0;
 }
 
-function clearAll() {
-    window.localStorage.clear();
-    displayName.textContent = "";
-    displayScore.textContent = "";
-}
+
 
 function checkAnswer(answer) {
     correct = questions[questionsIndex].correctAnswer;
