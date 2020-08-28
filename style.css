@@ -29,37 +29,9 @@ h1 {
     max-width: 80rem;
 }
 
-/* Centering content */
-
-.container > * {
-    width: 100%;
-}
-
-.flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-center {
-    justify-content: center;
-    align-items: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.hidden {
-    display: none;
-}
-
 /* Styling the buttons */
 
-.btn {
+.button {
     font-size: 1.8rem;
     padding: 1rem;
     width: 20rem;
@@ -71,7 +43,7 @@ h1 {
     background-color: white;
 }
 
-.btn:hover {
+.button:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(75, 0, 130, 0.5);
     transform: translateY(-0.1rem);

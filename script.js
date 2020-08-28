@@ -4,15 +4,7 @@ const question = document.getElementById("question");
 
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 
-// Defines more variables
-
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuestions = [];
-
-// Defines array of hard-coded dummy questions
+// Defines object of questions
 
 let questions = [
     {
@@ -41,54 +33,27 @@ let questions = [
     },
 ];
 
-const perfectBonus = 10;
-const totalQuestions = 3;
+// Defines more variables
 
-gameStart = () => {
-    questionCounter = 0;
-    score = 0;
-    availableQuestions = [...questions];
-    nextQuestion();
-};
+var questionsIndex = 0;
+var totalQuestions = questions.length;
+var remainingTime = 90;
+var timer;
+var score = 0;
+var correct;
 
-nextQuestion = () => {
-    if (availableQuestions.length === 0 || questionCounter >= totalQuestions) {  
-        // Takes user to game over page if there are no more questions left.
-        return window.location.assign("/gameover.html");
-    }
-    questionCounter++;
-    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
-    currentQuestion = availableQuestions[questionIndex];
-    question.innerText = currentQuestion.question;
+function highScores() {
 
-    choices.forEach((choice) => {
-        const number = choice.dataset["number"];
-        choice.innerText = currentQuestion["choice" + number];
-    });
-    availableQuestions.splice(questionIndex, 1);
+}
 
-    acceptingAnswers = true;
-};
+function checkAnswer() {
 
-choices.forEach((choice) => {
-    choice.addEventListener("click", (e) => {
-        if (!acceptingAnswers) return;
+}
 
-        acceptingAnswers = false;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"];
+function retake() {
 
-        // See if chosen answer is correct or not with ternary conditional operator.
+}
 
-        const chosenAnswer = 
-        selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+function clear() {
 
-        selectedChoice.parentElement.classList.add(chosenAnswer);
-
-        console.log(chosenAnswer);
-
-        nextQuestion();
-    });
-});
-
-gameStart();
+}
