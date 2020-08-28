@@ -4,7 +4,7 @@ var finalScore = document.getElementById("final");
 var gameOver = document.getElementById("gameover");
 var quizQuestions = document.getElementById("questions");
 var timer = document.getElementById("timer");
-var beginQuiz = document.getElementById("start");
+var startButton = document.getElementById("start");
 var startQuiz = document.getElementById("home");
 var scoreContainer = document.getElementById("scoreContainer");
 var scorePage = document.getElementById("scorePage");
@@ -20,7 +20,7 @@ var buttonD = document.getElementById("d");
 
 // Defines object of questions
 
-let questions = [
+var questions = [
     {
         question: "Where am I?",
         choice1: "I don't know",
@@ -65,9 +65,16 @@ function checkAnswer() {
 }
 
 function retake() {
-
+    scoreContainer.style.display = "none";
+    gameOver.style.display = "none";
+    startQuiz.style.display = "flex";
+    remainingTime = 90;
+    score = 0;
+    currentQuestionIndex = 0;
 }
 
 function clear() {
-
+    window.localStorage.clear();
+    displayName.textContent = "";
+    displayScore.textContent = "";
 }
