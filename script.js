@@ -51,7 +51,7 @@ var questions = [
 
 var questionsIndex = 0;
 var totalQuestions = questions.length;
-var remainingTime = 90;
+var remainingTime = 50;
 var timer;
 var score = 0;
 var correct;
@@ -59,7 +59,7 @@ var correct;
 function generateQuestions() {
     gameOver.style.display = "none";
     if (questionsIndex === totalQuestions) {
-        return yourScore;
+        return yourScore();
     }
     var yourQuestion = questions[questionsIndex];
     quizQuestions.innerHTML = "<p>" + yourQuestion.question + "</p>";
@@ -96,11 +96,13 @@ function yourScore() {
     finalScore.innerHTML = "Your score: " + score + " / " + questions.length;
 };
 
+// Adds function to submit button
 submitScore.addEventListener("click", function highScores() {
     if (initials.value === "") {
         alert("Please enter your initials.");
         return false;
     } else {
+        // Want to retrieve the value of savedScores
         var savedScores = JSON.parse(localStorage.getItem("savedScores")) || [];
         var player = initials.value.trim();
         var currentScore = {
@@ -119,11 +121,13 @@ submitScore.addEventListener("click", function highScores() {
     }
 });
 
+// Generates questions
 function generateScores(){
     displayName.innerHTML = "";
     displayScore.innerHTML = "";
     var highscores = JSON.parse(localStorage.getItem("savedScores")) || [];
-    for (i = 0; i < highscores.length; i++){
+    // Create list for scores
+    for (i = 0; i < highscores.length; i++) {
         var newNameSpan = document.createElement("li");
         var newScoreSpan = document.createElement("li");
         newNameSpan.textContent = highscores[i].name;
@@ -133,7 +137,8 @@ function generateScores(){
     }
 }
 
-function showHighscores(){
+// Displays highscores and hides other elements
+function showHighScores(){
     startQuiz.style.display = "none"
     gameOver.style.display = "none";
     scoreContainer.style.display = "flex";
@@ -143,23 +148,26 @@ function showHighscores(){
     generateScores();
 }
 
+// Allows player to start the quiz over. Resets remaining time, score, and 
+function retakeQuiz() {
+    scoreContainer.style.display = "none";
+    gameOver.style.display = "none";
+    startQuiz.style.display = "flex";
+    remainingTime = 50;
+    score = 0;
+    questionsIndex = 0;
+}
+
+
+// Erases the high scores
 function clearAll() {
     window.localStorage.clear();
     displayName.textContent = "";
     displayScore.textContent = "";
 }
 
-function retakeQuiz() {
-    scoreContainer.style.display = "none";
-    gameOver.style.display = "none";
-    startQuiz.style.display = "flex";
-    remainingTime = 90;
-    score = 0;
-    currentQuestionIndex = 0;
-}
 
-
-
+// Checks to see if selected answer is correct or not and displays feedback
 function checkAnswer(answer) {
     correct = questions[questionsIndex].correctAnswer;
     if (answer === correct && questionsIndex !== totalQuestions) {
@@ -176,4 +184,5 @@ function checkAnswer(answer) {
     }
 }
 
+// Starts the quiz
 startButton.addEventListener("click", start);

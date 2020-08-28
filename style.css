@@ -77,6 +77,7 @@ button:hover {
 
 #scorePage {
     display: none;
+    background: grey;
 }
 
 #scoreHeader {
