@@ -1,8 +1,22 @@
-const question = document.getElementById("question");
-
-// Defines variable choices as an array using class choice-text from questions.html as the elements.
-
-const choices = Array.from(document.getElementsByClassName("choice-text"));
+var quiz = document.getElementById("quiz");
+var result = document.getElementById("results");
+var finalScore = document.getElementById("final");
+var gameOver = document.getElementById("gameover");
+var quizQuestions = document.getElementById("questions");
+var timer = document.getElementById("timer");
+var beginQuiz = document.getElementById("start");
+var startQuiz = document.getElementById("home");
+var scoreContainer = document.getElementById("scoreContainer");
+var scorePage = document.getElementById("scorePage");
+var initials = document.getElementById("initials");
+var displayName = document.getElementById("scoreInitials");
+var endGame = document.getElementById("weAreDone");
+var submitScore = document.getElementById("submit");
+var displayScore = document.getElementById("highScores");
+var buttonA = document.getElementById("a");
+var buttonB = document.getElementById("b");
+var buttonC = document.getElementById("c");
+var buttonD = document.getElementById("d");
 
 // Defines object of questions
 
