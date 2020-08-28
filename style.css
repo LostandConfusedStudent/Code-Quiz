@@ -29,6 +29,8 @@ h1 {
     max-width: 80rem;
 }
 
+/* Centering content */
+
 .container > * {
     width: 100%;
 }
@@ -54,6 +56,8 @@ h1 {
 .hidden {
     display: none;
 }
+
+/* Styling the buttons */
 
 .btn {
     font-size: 1.8rem;

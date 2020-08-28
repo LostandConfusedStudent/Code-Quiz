@@ -3,7 +3,6 @@ const question = document.getElementById("question");
 // Defines variable choices as an array using class choice-text from questions.html as the elements.
 
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-console.log(choices);
 
 // Defines more variables
 
@@ -13,7 +12,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-// Defines array of hard-coded questions
+// Defines array of hard-coded dummy questions
 
 let questions = [
     {
@@ -78,6 +77,16 @@ choices.forEach((choice) => {
         acceptingAnswers = false;
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
+
+        // See if chosen answer is correct or not with ternary conditional operator.
+
+        const chosenAnswer = 
+        selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
+        selectedChoice.parentElement.classList.add(chosenAnswer);
+
+        console.log(chosenAnswer);
+
         nextQuestion();
     });
 });
