@@ -23,11 +23,11 @@ var buttonD = document.getElementById("d");
 
 var questions = [
     {
-        question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        choiceA: "<script src='xxx.js'>",
-        choiceB: "<script name='xxx.js'>",
-        choiceC: "<script href='xxx.js'>",
-        choiceD: "None of the above",
+        question: "What is the correct way to write a JavaScript array?",
+        choiceA: "var colors = ['red', 'green', 'blue']",
+        choiceB: "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')",
+        choiceC: "var colors = (1:'red', 2:'green', 3:'blue')",
+        choiceD: "var colors = 'red', 'green', 'blue'",
         correctAnswer: "a"
     },
     {
