@@ -121,3 +121,8 @@ li {
 #weAreDone {
     display: none;
 }
+
+#a, #b, #c, #d {
+    display: block;
+    width: 500px;
+}
