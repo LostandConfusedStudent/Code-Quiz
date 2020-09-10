@@ -19,31 +19,48 @@ var buttonC = document.getElementById("c");
 var buttonD = document.getElementById("d");
 
 // Defines object of questions
+// Questions taken from W3Schools JavaScript quiz
 
 var questions = [
     {
-        question: "Where am I?",
-        choiceA: "I don't know",
-        choiceB: "Who are you?",
-        choiceC: "I don't care.",
-        choiceD: "You're lost.",
-        correctAnswer: "d"
-    },
-    {
-        question: "Why am I hungry?",
-        choiceA: "Please don't eat me.",
-        choiceB: "You forgot to have lunch.",
-        choiceC: "You exercise so much, it doesn't matter how much you eat. It will never be enough. You're cursed.",
-        choiceD: "Because I am eating in front of you and you have nothing.",
+        question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        choiceA: "<script src='xxx.js'>",
+        choiceB: "<script name='xxx.js'>",
+        choiceC: "<script href='xxx.js'>",
+        choiceD: "None of the above",
         correctAnswer: "a"
     },
     {
-        question: "What do you do when you see that your friend is upset?",
-        choiceA: "Run away as fast and as far as possible.",
-        choiceB: "Use a friend who gives good advice as a human shield.",
-        choiceC: "Distract him or her with candy or other desirable objects.",
-        choiceD: "Help the friend calm down and find a solution.",
+        question: "How do you write 'Hello World' in an alert box?",
+        choiceA: "alertBox('Hello World')",
+        choiceB: "msg('Hello World')",
+        choiceC: "alert('Hello World')",
+        choiceD: "msgBox('Hello World')",
+        correctAnswer: "c"
+    },
+    {
+        question: "How do you create a function in JavaScript?",
+        choiceA: "function:myFunction()",
+        choiceB: "function = myFunction()",
+        choiceC: "function => myFunction()",
+        choiceD: "function myFunction()",
+        correctAnswer: "d"
+    },
+    {
+        question: "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
+        choiceA: "if i =! 5 then",
+        choiceB: "if (i != 5)",
+        choiceC: "if (i <> 5)",
+        choiceD: "if i <> 5",
         correctAnswer: "b"
+    },
+    {
+        question: "How does a FOR loop start?",
+        choiceA: "for (i = 0; i <= 5; i++)",
+        choiceB: "for i = 1 to 5",
+        choiceC: "for (i <= 5; i++)",
+        choiceD: "for (i = 0; i <= 5)",
+        correctAnswer: "a"
     },
 ];
 
