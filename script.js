@@ -195,6 +195,7 @@ function checkAnswer(answer) {
     } else if (answer !== correct && questionsIndex !== totalQuestions) {
         alert("Incorrect");
         questionsIndex++;
+        // Subtract 10 seconds from timer for each incorrect answer
         remainingTime -= 10;
         generateQuestions();
     } else {
