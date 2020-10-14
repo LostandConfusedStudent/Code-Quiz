@@ -12,5 +12,5 @@ This is the homework for week four. The main objective is to develop a responsiv
 
 ## <div align="center">Links</div>
 
-https://github.com/LostandConfusedStudent/Code-Quiz
-https://lostandconfusedstudent.github.io/Code-Quiz/
+* https://github.com/LostandConfusedStudent/Code-Quiz
+* https://lostandconfusedstudent.github.io/Code-Quiz/
